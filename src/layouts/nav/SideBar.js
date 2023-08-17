@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { Component } from "react";
 
@@ -9,6 +9,7 @@ import { Modal } from "react-bootstrap";
 
 /// Scroll
 import PerfectScrollbar from "react-perfect-scrollbar";
+import { usePathname } from "next/navigation";
 
 /// Menu
 import MetisMenu from "metismenujs";
@@ -69,13 +70,11 @@ class SideBar extends Component {
     function heartBlast() {
       return handleheartBlast.classList.toggle("heart-blast");
     }
-
     handleheartBlast.addEventListener("click", heartBlast);
   }
   render() {
     /// Path
-
-    let path = window.location.pathname;
+    let path = this.props.pathName;
     path = path.split("/");
     path = path[path.length - 1];
 
@@ -937,5 +936,10 @@ class SideBar extends Component {
     );
   }
 }
-
-export default SideBar;
+const withHook = (Component) => {
+  return (props) => {
+    const pathname = usePathname();
+    return <Component pathName={pathname} {...props} />;
+  };
+};
+export default withHook(SideBar);

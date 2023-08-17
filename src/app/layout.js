@@ -2,16 +2,16 @@
 
 import React, { useState, useEffect } from "react";
 // import "./globals.css";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import Nav from "../layouts/nav";
 import Footer from "../layouts/Footer";
 import ScrollToTop from "@/pages/ScrollToTop";
+import "../css/style.css";
 import "./layout.css";
 import "../vendor/bootstrap-select/dist/css/bootstrap-select.min.css";
-import "../css/style.css";
 import { usePathname } from "next/navigation";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -25,9 +25,11 @@ export const metadata = {
 
 let path = "";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, width }) {
   const pathname = usePathname();
   const [pagePath, setPagepath] = useState();
+  const [windowWidth, setWindowWidth] = useState(0);
+
   // const [path, setPath] = useState(window.location.pathname);
 
   useEffect(() => {
@@ -45,7 +47,26 @@ export default function RootLayout({ children }) {
   // const pagePath = pathSegments[pathSegments.length - 1].includes("page");
 
   const [activeEvent, setActiveEvent] = useState(!path);
+  useEffect(() => {
+    const handleResize = () => {
+      const body = document.querySelector("body");
+      if (window.innerWidth >= 1300) {
+        body.setAttribute("data-sidebar-style", "full");
+      } else if (window.innerWidth <= 1299 && window.innerWidth >= 767) {
+        body.setAttribute("data-sidebar-style", "mini");
+      } else {
+        body.setAttribute("data-sidebar-style", "overlay");
+      }
+      setWindowWidth(window.innerWidth);
+    };
 
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <html lang="en">
       <head>
@@ -64,7 +85,7 @@ export default function RootLayout({ children }) {
         data-container="wide"
         direction="ltr"
         data-primary="color_1"
-        className={inter.className}
+        // className={inter.className}
       >
         <div
           id={`${!pagePath ? "main-wrapper" : ""}`}

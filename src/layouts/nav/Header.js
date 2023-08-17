@@ -7,12 +7,14 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 /// Image
 import profile from "../../images/profile/17.jpg";
 import avatar from "../../images/avatar/1.jpg";
+import { usePathname } from "next/navigation";
 
 const Header = ({ onNote, toggle, onProfile, onActivity, onNotification }) => {
   const [pageName, setPageName] = useState("Dashboard");
+  const pathname = usePathname();
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const path = window.location.pathname.split("/");
+      const path = pathname.split("/");
       const name = path[path.length - 1].split("-");
       const filterName = name.length >= 3 ? name.filter((n, i) => i > 0) : name;
       const finalName = filterName.includes("app")
@@ -42,7 +44,7 @@ const Header = ({ onNote, toggle, onProfile, onActivity, onNotification }) => {
       const formattedPageName = finalName.join(" ") || "Dashboard";
       setPageName(formattedPageName);
     }
-  }, []);
+  }, [pathname]);
   // var path = window.location.pathname.split("/");
   // var name = path[path.length - 1].split("-");
   // var filterName = name.length >= 3 ? name.filter((n, i) => i > 0) : name;
