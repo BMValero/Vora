@@ -4,9 +4,13 @@ import PageTitle from "../../../layouts/PageTitle";
 import data from "../../table/tableData";
 import { Badge, Dropdown, Table } from "react-bootstrap";
 
-const checkbox = document.querySelectorAll(".check-input input");
+const checkbox =
+  typeof document !== "undefined" &&
+  document.querySelectorAll(".check-input input");
 //const mothercheckbox = document.querySelector(".sorting_asc input");
-const mothercheckbox = document.querySelector(".check-input-all input");
+const mothercheckbox =
+  typeof document !== "undefined" &&
+  document.querySelector(".check-input-all input");
 // console.log(document.querySelectorAll(".sorting_1 input")[0].checked);
 const checkboxFun = (type) => {
   for (let i = 0; i < checkbox.length; i++) {
@@ -30,8 +34,12 @@ const checkboxFun = (type) => {
 
 const ProductOrder = () => {
   /// input all select
-  const checkbox = document.querySelectorAll(".check-input input");
-  const mothercheckbox = document.querySelector(".check-input-all input");
+  const checkbox =
+    typeof document !== "undefined" &&
+    document.querySelectorAll(".check-input input");
+  const mothercheckbox =
+    typeof document !== "undefined" &&
+    document.querySelector(".check-input-all input");
   const checkboxFun = (type) => {
     for (let i = 0; i < checkbox.length; i++) {
       const element = checkbox[i];

@@ -1,9 +1,16 @@
 "use client";
+import dynamic from "next/dynamic.js";
 import React, { Fragment, Component, useState } from "react";
 import Link from "next/link";
 import { Modal } from "react-bootstrap";
-import Board, { moveCard } from "@asseinfo/react-kanban";
+// import Board from "@asseinfo/react-kanban";
 import { board } from "./Kanban/KanbanData";
+const Board = dynamic(() => import("@asseinfo/react-kanban"), {
+  ssr: false,
+});
+const { moveCard } = dynamic(() => import("@asseinfo/react-kanban"), {
+  ssr: false,
+});
 
 // import user1 from "../../../../images/users/1.jpg";
 // import user2 from "../../../../images/users/2.jpg";
@@ -58,138 +65,141 @@ class Kanban extends Component {
     return (
       <Fragment>
         <div className="row">
-          <div className="col-xl-12">
-            <div className="card">
-              <div className="card-body">
-                <div className="d-md-flex d-block mb-md-4 mb-3 align-items-end">
-                  <div className="mr-auto pr-3 mb-md-0 mb-3">
-                    <h2 className="title-num text-black font-w600">
-                      Base Vora’s Project v2.4
-                    </h2>
-                    <span className="fs-14">
-                      Created by Lidya Chan on June 31, 2020
-                    </span>
+            <div className="col-xl-12">
+              <div className="card">
+                <div className="card-body">
+                  <div className="d-md-flex d-block mb-md-4 mb-3 align-items-end">
+                    <div className="mr-auto pr-3 mb-md-0 mb-3">
+                      <h2 className="title-num text-black font-w600">
+                        Base Vora’s Project v2.4
+                      </h2>
+                      <span className="fs-14">
+                        Created by Lidya Chan on June 31, 2020
+                      </span>
+                    </div>
+                    <ul className="users-lg">
+                      <li>
+                        <img src={user14.src} alt="" />
+                      </li>
+                      <li>
+                        <img src={user15.src} alt="" />
+                      </li>
+                      <li>
+                        <img src={user16.src} alt="" />
+                      </li>
+                      <li>
+                        <img src={user17.src} alt="" />
+                      </li>
+                      <li>
+                        <img src={user18.src} alt="" />
+                      </li>
+                      <li>
+                        <img src={user19.src} alt="" />
+                      </li>
+                      <li>
+                        <img src={user20.src} alt="" />
+                      </li>
+                    </ul>
                   </div>
-                  <ul className="users-lg">
-                    <li>
-                      <img src={user14.src} alt="" />
-                    </li>
-                    <li>
-                      <img src={user15.src} alt="" />
-                    </li>
-                    <li>
-                      <img src={user16.src} alt="" />
-                    </li>
-                    <li>
-                      <img src={user17.src} alt="" />
-                    </li>
-                    <li>
-                      <img src={user18.src} alt="" />
-                    </li>
-                    <li>
-                      <img src={user19.src} alt="" />
-                    </li>
-                    <li>
-                      <img src={user20.src} alt="" />
-                    </li>
-                  </ul>
-                </div>
-                <div className="row">
-                  <p className="fs-14 mr-auto col-lg-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <div className="col-lg-6 text-lg-right text-left">
-                    <Link
-                      href="#"
-                      onClick={this.handleShow}
-                      data-toggle="modal"
-                      data-target="#addOrderModal"
-                      className="btn btn-primary rounded mr-3 mb-sm-0 mb-2"
+                  <div className="row">
+                    <p className="fs-14 mr-auto col-lg-6">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                    <div className="col-lg-6 text-lg-right text-left">
+                      <Link
+                        href="#"
+                        onClick={this.handleShow}
+                        data-toggle="modal"
+                        data-target="#addOrderModal"
+                        className="btn btn-primary rounded mr-3 mb-sm-0 mb-2"
+                      >
+                        <i
+                          className="fa fa-user mr-3 scale5"
+                          aria-hidden="true"
+                        ></i>
+                        New Contact
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn btn-light rounded mr-3 mb-sm-0 mb-2"
+                      >
+                        <i
+                          className="fa fa-pencil-square mr-3 scale5"
+                          aria-hidden="true"
+                        ></i>
+                        Edit
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn btn-light rounded mb-sm-0 mb-2"
+                      >
+                        <i
+                          className="fa fa-lock mr-3 scale5"
+                          aria-hidden="true"
+                        ></i>
+                        Private
+                      </Link>
+                    </div>
+
+                    <Modal
+                      className="modal fade"
+                      show={this.state.show}
+                      onHide={this.handleClose}
+                      id="addOrderModal"
                     >
-                      <i
-                        className="fa fa-user mr-3 scale5"
-                        aria-hidden="true"
-                      ></i>
-                      New Contact
-                    </Link>
-                    <Link
-                      href="#"
-                      className="btn btn-light rounded mr-3 mb-sm-0 mb-2"
-                    >
-                      <i
-                        className="fa fa-pencil-square mr-3 scale5"
-                        aria-hidden="true"
-                      ></i>
-                      Edit
-                    </Link>
-                    <Link
-                      href="#"
-                      className="btn btn-light rounded mb-sm-0 mb-2"
-                    >
-                      <i
-                        className="fa fa-lock mr-3 scale5"
-                        aria-hidden="true"
-                      ></i>
-                      Private
-                    </Link>
-                  </div>
-                  {/* <!-- Add Order modal --> */}
-                  <Modal
-                    className="modal fade"
-                    show={this.state.show}
-                    onHide={this.handleClose}
-                    id="addOrderModal"
-                  >
-                    <div role="document">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h5 className="modal-title">Add Contact</h5>
-                          <button
-                            type="button"
-                            className="close"
-                            onClick={this.handleClose}
-                            data-dismiss="modal"
-                          >
-                            <span>&times;</span>
-                          </button>
-                        </div>
-                        <div className="modal-body">
-                          <form>
-                            <div className="form-group">
-                              <label className="text-black font-w500">
-                                First Name
-                              </label>
-                              <input type="text" className="form-control" />
-                            </div>
-                            <div className="form-group">
-                              <label className="text-black font-w500">
-                                Last Name
-                              </label>
-                              <input type="text" className="form-control" />
-                            </div>
-                            <div className="form-group">
-                              <label className="text-black font-w500">
-                                Address
-                              </label>
-                              <input type="text" className="form-control" />
-                            </div>
-                            <div className="form-group">
-                              <button type="button" className="btn btn-primary">
-                                SAVE
-                              </button>
-                            </div>
-                          </form>
+                      <div role="document">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h5 className="modal-title">Add Contact</h5>
+                            <button
+                              type="button"
+                              className="close"
+                              onClick={this.handleClose}
+                              data-dismiss="modal"
+                            >
+                              <span>&times;</span>
+                            </button>
+                          </div>
+                          <div className="modal-body">
+                            <form>
+                              <div className="form-group">
+                                <label className="text-black font-w500">
+                                  First Name
+                                </label>
+                                <input type="text" className="form-control" />
+                              </div>
+                              <div className="form-group">
+                                <label className="text-black font-w500">
+                                  Last Name
+                                </label>
+                                <input type="text" className="form-control" />
+                              </div>
+                              <div className="form-group">
+                                <label className="text-black font-w500">
+                                  Address
+                                </label>
+                                <input type="text" className="form-control" />
+                              </div>
+                              <div className="form-group">
+                                <button
+                                  type="button"
+                                  className="btn btn-primary"
+                                >
+                                  SAVE
+                                </button>
+                              </div>
+                            </form>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Modal>
+                    </Modal>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         <div className="kanban-bx">
           <div className="kanbanPreview-bx">
             <div className="draggable-zone dropzoneContainer ">

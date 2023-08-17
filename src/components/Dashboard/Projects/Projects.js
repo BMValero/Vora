@@ -1,14 +1,20 @@
 "use client";
+import dynamic from "next/dynamic.js";
 import React, { Fragment, useState, useRef } from "react";
 import Link from "next/link";
 
 import { Tab, Nav } from "react-bootstrap";
 import data from "./Tabldata.js";
 
-import Alldata from "./Alldata";
-import Process from "./Process";
-import Pending from "./Pending";
-import Closed from "./Closed";  
+const Alldata = dynamic(() => import('./Alldata.js'), {ssr: false})
+const Process = dynamic(() => import('./Process.js'), {ssr: false})
+const Pending = dynamic(() => import('./Pending.js'), {ssr: false})
+const Closed = dynamic(() => import('./Closed.js'), {ssr: false})
+
+// import Alldata from "./Alldata";
+// import Process from "./Process";
+// import Pending from "./Pending";
+// import Closed from "./Closed";  
 
 const tabData = [
   { number: "13", name: "All Projects", content: <Alldata /> },
@@ -55,6 +61,7 @@ const Projects = () => {
       )
     );
   };
+  console.log("tabData", tabData)
   return (
     <Fragment>
       <Tab.Container defaultActiveKey={tabData[0].name.toLowerCase()}>

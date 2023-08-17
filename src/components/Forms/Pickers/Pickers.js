@@ -1,29 +1,33 @@
 "use client";
+import dynamic from "next/dynamic.js";
 import React, { useState, Fragment } from "react";
 
-import   DatePicker  from "react-datepicker";
+import DatePicker from "react-datepicker";
 //import { DatePicker } from "@y0c/react-datepicker";
 //import   RangeDatePicker  from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-
 import DateRangePicker from "react-bootstrap-daterangepicker";
 import "bootstrap-daterangepicker/daterangepicker.css";
 
-import TimePicker from './TimePicker';
+const TimePicker = dynamic(() => import("./TimePicker"), { ssr: false });
+// import TimePicker from "./TimePicker";
 
 ///
 //import MetarialDate from "./MetarialDate";
 //import MetarialDateAndTime from "./MetarialDateAndTime";
 //import MetarialTime from "./MetarialTime";
 //import ColorPicker from "./Color";
-import Gradient from "./LinearGradientPicker";
+const Gradient = dynamic(() => import("./LinearGradientPicker"), {
+  ssr: false,
+});
+// import Gradient from "./LinearGradientPicker";
 
 import PageTitle from "../../../layouts/PageTitle";
 
 const Pickers = () => {
   const [colorChange, setColorChange] = useState(null);
- // const [startDate, setStartDate] = useState(new Date());
+  // const [startDate, setStartDate] = useState(new Date());
 
   return (
     <Fragment>
@@ -47,9 +51,15 @@ const Pickers = () => {
                       endPlaceholder="End Date"
                     />  */}
                     <DateRangePicker
-                      initialSettings={{ startDate: '10/5/2022', endDate: '3/6/2022' }}
+                      initialSettings={{
+                        startDate: "10/5/2022",
+                        endDate: "3/6/2022",
+                      }}
                     >
-                        <input type="text" className="form-control input-daterange-timepicker" />
+                      <input
+                        type="text"
+                        className="form-control input-daterange-timepicker"
+                      />
                     </DateRangePicker>
                   </div>
                 </div>
@@ -64,22 +74,25 @@ const Pickers = () => {
                     />   */}
 
                     <DateRangePicker>
-                        <input type="text" className="form-control input-daterange-timepicker" />
+                      <input
+                        type="text"
+                        className="form-control input-daterange-timepicker"
+                      />
                     </DateRangePicker>
                   </div>
-                </div> 
+                </div>
               </div>
             </div>
           </div>
         </div>
-		    <div className="col-xl-3 col-lg-4">
+        <div className="col-xl-3 col-lg-4">
           <div className="card">
             <div className="card-header">
               <h4 className="card-title">Pick-Date picker</h4>
             </div>
             <div className="card-body">
               <p className="mb-1">Default picker</p>
-			      <DatePicker  className="form-control"/> 
+              <DatePicker className="form-control" />
             </div>
           </div>
         </div>
@@ -90,39 +103,38 @@ const Pickers = () => {
             </div>
             <div className="card-body">
               <div className="row picker-data">
-			  {/* <div className="col-md-6 col-xl-6 col-xxl-6 mb-3">
+                {/* <div className="col-md-6 col-xl-6 col-xxl-6 mb-3">
                   <label>Default Clock Picker</label>
                   <div className="input-group clockpicker example">
 						<TimePicker />
                   </div>
 			  </div> */}
-				<div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
-					<div className="color-time-picker">
-						<p className="mb-1">Complex mode</p>
-						<TimePicker />			
-					</div>
-                </div> 
-				<div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
-					<div className="color-time-picker style-1">
-						<p className="mb-1">Auto close Clock Picker</p>
-						<TimePicker />			
-					</div>
+                <div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                  <div className="color-time-picker">
+                    <p className="mb-1">Complex mode</p>
+                    <TimePicker />
+                  </div>
                 </div>
-				<div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
-					<div className="color-time-picker">
-						<p className="mb-1">Now time</p>
-						<TimePicker />			
-					</div>
+                <div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                  <div className="color-time-picker style-1">
+                    <p className="mb-1">Auto close Clock Picker</p>
+                    <TimePicker />
+                  </div>
                 </div>
-				<div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
-					<div className="color-time-picker style-1">
-						<p className="mb-1">Left Placement</p>
-						<TimePicker />			
-					</div>
+                <div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                  <div className="color-time-picker">
+                    <p className="mb-1">Now time</p>
+                    <TimePicker />
+                  </div>
                 </div>
-				
-				
-				{ /* <div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                <div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                  <div className="color-time-picker style-1">
+                    <p className="mb-1">Left Placement</p>
+                    <TimePicker />
+                  </div>
+                </div>
+
+                {/* <div className="col-md-6 col-xl-3 col-xxl-6 mb-3">
                   <label>Auto close Clock Picker</label>
                   <div
                     className="input-group clockpicker"
@@ -166,8 +178,8 @@ const Pickers = () => {
               </div>
             </div>
           </div>
-        </div> 
-		{/* <div className="col-12">
+        </div>
+        {/* <div className="col-12">
           <div className="card">
             <div className="card-header">
               <h4 className="card-title">Material Date picker</h4>
@@ -212,7 +224,7 @@ const Pickers = () => {
                     />
                   </div>
                 </div>
-				{/* <div className="col-xl-4 col-lg-6 mb-3">
+                {/* <div className="col-xl-4 col-lg-6 mb-3">
                   <div className="example">
                     <p className="mb-1">Complex mode</p>
 					 <ColorPicker />   
@@ -227,7 +239,7 @@ const Pickers = () => {
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </Fragment>
   );

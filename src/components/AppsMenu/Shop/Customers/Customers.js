@@ -31,8 +31,12 @@ const Customers = () => {
     </Dropdown>
   );
 
-  const chackbox = document.querySelectorAll(".customer_shop_single input");
-  const motherChackBox = document.querySelector(".customer_shop input");
+  const chackbox =
+    typeof document !== "undefined" &&
+    document.querySelectorAll(".customer_shop_single input");
+  const motherChackBox =
+    typeof document !== "undefined" &&
+    document.querySelector(".customer_shop input");
   // console.log(document.querySelectorAll(".publish_review input")[0].checked);
   const chackboxFun = (type) => {
     for (let i = 0; i < chackbox.length; i++) {
