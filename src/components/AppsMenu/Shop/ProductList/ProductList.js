@@ -1,6 +1,7 @@
 "use client";
 import React, { Fragment, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Modal } from "react-bootstrap";
 
 import PageTitle from "../../../../layouts/PageTitle";
@@ -28,7 +29,13 @@ const ProductList = () => {
                 <div className="col-md-5 col-xxl-12">
                   <div className="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
                     <div className="new-arrivals-img-contnent">
-                      <img className="img-fluid" src={product2.src} alt="" />
+                      <Image
+                        width={100}
+                        height={100}
+                        className="img-fluid"
+                        src={product2.src}
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -102,7 +109,13 @@ const ProductList = () => {
                 <div className="col-md-5 col-xxl-12">
                   <div className="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
                     <div className="new-arrivals-img-contnent">
-                      <img className="img-fluid" src={product3.src} alt="" />
+                      <Image
+                        width={100}
+                        height={100}
+                        className="img-fluid"
+                        src={product3.src}
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -176,7 +189,13 @@ const ProductList = () => {
                 <div className="col-md-5 col-xxl-12">
                   <div className="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
                     <div className="new-arrivals-img-contnent">
-                      <img className="img-fluid" src={product4.src} alt="" />
+                      <Image
+                        width={100}
+                        height={100}
+                        className="img-fluid"
+                        src={product4.src}
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -250,7 +269,14 @@ const ProductList = () => {
                 <div className="col-md-5 col-xxl-12">
                   <div className="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
                     <div className="new-arrivals-img-contnent">
-                      <img className="img-fluid" src={product5.src} alt="" />
+                      <Image
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="img-fluid w-100 h-100"
+                        src={product5.src}
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -324,7 +350,14 @@ const ProductList = () => {
                 <div className="col-md-5 col-xxl-12">
                   <div className="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
                     <div className="new-arrivals-img-contnent">
-                      <img className="img-fluid" src={product6.src} alt="" />
+                      <Image
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="img-fluid w-100 h-100"
+                        src={product6.src}
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -337,19 +370,18 @@ const ProductList = () => {
                     </h4>
                     <div className="comment-review star-rating">
                       <ul>
-                        {" "}
                         <li>
                           <i className="fa fa-star" />
-                        </li>{" "}
+                        </li>
                         <li>
                           <i className="fa fa-star" />
-                        </li>{" "}
+                        </li>
                         <li>
                           <i className="fa fa-star" />
-                        </li>{" "}
+                        </li>
                         <li>
                           <i className="fa fa-star" />
-                        </li>{" "}
+                        </li>
                         <li>
                           <i className="fa fa-star" />
                         </li>
@@ -398,7 +430,14 @@ const ProductList = () => {
                 <div className="col-md-5 col-xxl-12">
                   <div className="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
                     <div className="new-arrivals-img-contnent">
-                      <img className="img-fluid" src={product7.src} alt="" />
+                      <Image
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="img-fluid w-100 h-100"
+                        src={product7.src}
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -411,19 +450,18 @@ const ProductList = () => {
                     </h4>
                     <div className="comment-review star-rating">
                       <ul>
-                        {" "}
                         <li>
                           <i className="fa fa-star" />
-                        </li>{" "}
+                        </li>
                         <li>
                           <i className="fa fa-star" />
-                        </li>{" "}
+                        </li>
                         <li>
                           <i className="fa fa-star" />
-                        </li>{" "}
+                        </li>
                         <li>
                           <i className="fa fa-star" />
-                        </li>{" "}
+                        </li>
                         <li>
                           <i className="fa fa-star" />
                         </li>
@@ -491,9 +529,10 @@ const ProductList = () => {
                   }}
                 >
                   <div className="text-center mb-4">
-                    <img
+                    <Image
                       className="img-fluid rounded"
                       width={78}
+                      height={78}
                       src={avatar1.src}
                       alt="DexignZone"
                     />

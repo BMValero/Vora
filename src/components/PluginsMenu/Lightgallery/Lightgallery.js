@@ -1,5 +1,6 @@
 "use client";
 import React, { Component } from "react";
+import Image from "next/image";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { SRLWrapper } from "simple-react-lightbox";
 
@@ -45,7 +46,7 @@ class Lightgallery extends Component {
                           className="col-lg-3 col-md-6 mb-4"
                           key={index}
                         >
-                          <img src={item.thumb} style={{ width: "100%" }} />
+                          <Image width={100} height={100} src={item.thumb} style={{ width: "100%" }} />
                         </a>
                       ))}
                     </div>

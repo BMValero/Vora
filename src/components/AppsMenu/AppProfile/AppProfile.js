@@ -1,6 +1,7 @@
 "use client";
 import React, { Fragment, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 //** Import Image */
 import profile01 from "../../../images/profile/1.jpg";
 import profile05 from "../../../images/profile/5.jpg";
@@ -37,8 +38,10 @@ const AppProfile = () => {
               </div>
               <div className="profile-info">
                 <div className="profile-photo">
-                  <img
+                  <Image
                     src={profile.src}
+                    width={100}
+                    height={100}
                     className="img-fluid rounded-circle"
                     alt="profile"
                   />
@@ -143,8 +146,11 @@ const AppProfile = () => {
                 <Link href="#" className="pull-right f-s-16">
                   More
                 </Link>
-                <img
+                <Image
                   src={profile01.src}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
                   alt="profile"
                   className="img-fluid mt-4 mb-4 w-100"
                 />
@@ -168,8 +174,10 @@ const AppProfile = () => {
               <div className="profile-news">
                 <h5 className="text-primary d-inline">Our Latest News</h5>
                 <div className="media pt-3 pb-3">
-                  <img
+                  <Image
                     src={profile05.src}
+                    width={75}
+                    height={75}
                     alt=""
                     className="mr-3 rounded"
                     style={{ width: "75px" }}
@@ -187,8 +195,10 @@ const AppProfile = () => {
                   </div>
                 </div>
                 <div className="media pt-3 pb-3">
-                  <img
+                  <Image
                     src={profile06.src}
+                    width={75}
+                    height={75}
                     alt=""
                     className="mr-3 rounded"
                     style={{ width: "75px" }}
@@ -206,8 +216,10 @@ const AppProfile = () => {
                   </div>
                 </div>
                 <div className="media pt-3 pb-3">
-                  <img
+                  <Image
                     src={profile07.src}
+                    width={75}
+                    height={75}
                     alt=""
                     className="mr-3 rounded"
                     style={{ width: "75px" }}
@@ -309,8 +321,11 @@ const AppProfile = () => {
                           </Link>
                         </div>
                         <div className="profile-uoloaded-post border-bottom-1 pb-5 ">
-                          <img
+                          <Image
                             src={profile08.src}
+                            width="0"
+                            height="0"
+                            sizes="100vw"
                             alt=""
                             className="img-fluid w-100"
                           />
@@ -340,7 +355,14 @@ const AppProfile = () => {
                           </Link>
                         </div>
                         <div className="profile-uoloaded-post border-bottom-1 pb-5">
-                          <img src={profile09.src} alt="" className="img-fluid" />
+                          <Image
+                            src={profile09.src}
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            alt=""
+                            className="img-fluid w-100"
+                          />
                           <Link className="post-title" href="/post-details">
                             <h4>Collection of textile samples lay spread</h4>
                           </Link>
@@ -367,7 +389,14 @@ const AppProfile = () => {
                           </Link>
                         </div>
                         <div className="profile-uoloaded-post pb-3">
-                          <img src={profile08.src} alt="" className="img-fluid" />
+                          <Image
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            src={profile08.src}
+                            alt=""
+                            className="img-fluid w-100"
+                          />
                           <Link className="post-title" href="/post-details">
                             <h4>Collection of textile samples lay spread</h4>
                           </Link>

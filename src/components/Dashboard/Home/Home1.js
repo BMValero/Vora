@@ -1,6 +1,7 @@
 "use client";
 import React, { Fragment } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Dropdown, ProgressBar, Tab, Nav } from "react-bootstrap";
 import PerfectScrollbar from "react-perfect-scrollbar";
 //** Import Image */
@@ -417,16 +418,36 @@ const Home1 = () => {
                       <div className="row justify-content-between">
                         <ul className="users col-6">
                           <li>
-                            <img src={user1.src} alt="" />
+                            <Image
+                              src={user1.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user2.src} alt="" />
+                            <Image
+                              src={user2.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user3.src} alt="" />
+                            <Image
+                              src={user3.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user4.src} alt="" />
+                            <Image
+                              src={user4.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                         </ul>
                         <div className="col-6 pl-0">
@@ -457,16 +478,36 @@ const Home1 = () => {
                       <div className="row justify-content-between">
                         <ul className="users col-6">
                           <li>
-                            <img src={user5.src} alt="" />
+                            <Image
+                              src={user5.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user6.src} alt="" />
+                            <Image
+                              src={user6.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user7.src} alt="" />
+                            <Image
+                              src={user7.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user8.src} alt="" />
+                            <Image
+                              src={user8.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                         </ul>
                         <div className="col-6 pl-0">
@@ -497,16 +538,36 @@ const Home1 = () => {
                       <div className="row justify-content-between">
                         <ul className="users col-6">
                           <li>
-                            <img src={user9.src} alt="" />
+                            <Image
+                              src={user9.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user10.src} alt="" />
+                            <Image
+                              src={user10.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user11.src} alt="" />
+                            <Image
+                              src={user11.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user12.src} alt="" />
+                            <Image
+                              src={user12.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                         </ul>
                         <div className="col-6 pl-0">
@@ -537,16 +598,36 @@ const Home1 = () => {
                       <div className="row justify-content-between">
                         <ul className="users col-6">
                           <li>
-                            <img src={user5.src} alt="" />
+                            <Image
+                              src={user5.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user6.src} alt="" />
+                            <Image
+                              src={user6.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user7.src} alt="" />
+                            <Image
+                              src={user7.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user8.src} alt="" />
+                            <Image
+                              src={user8.src}
+                              width={30}
+                              height={30}
+                              alt=""
+                            />
                           </li>
                         </ul>
                         <div className="col-6 pl-0">
@@ -884,8 +965,10 @@ const Home1 = () => {
                 <div className="card-body">
                   <div className="media mb-4">
                     <div className="image-bx mr-sm-4 mr-2">
-                      <img
+                      <Image
                         src={user13.src}
+                        width={30}
+                        height={30}
                         alt=""
                         className="rounded-circle img-1"
                       />
@@ -914,8 +997,10 @@ const Home1 = () => {
                   </div>
                   <div className="media mb-4">
                     <div className="image-bx mr-sm-4 mr-2">
-                      <img
+                      <Image
                         src={user14.src}
+                        width={30}
+                        height={30}
                         alt=""
                         className="rounded-circle img-1"
                       />
@@ -944,8 +1029,10 @@ const Home1 = () => {
                   </div>
                   <div className="media">
                     <div className="image-bx mr-sm-4 mr-2">
-                      <img
+                      <Image
                         src={user15.src}
+                        width={30}
+                        height={30}
                         alt=""
                         className="rounded-circle img-1"
                       />

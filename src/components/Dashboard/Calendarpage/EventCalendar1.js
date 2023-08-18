@@ -1,6 +1,7 @@
 "use client";
 import React, { Component } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -203,13 +204,28 @@ class EventCalendar1 extends Component {
                         </h6>
                         <ul className="users">
                           <li>
-                            <img src={user9.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user9.src}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user10.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user10.src}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user11.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user11.src}
+                              alt=""
+                            />
                           </li>
                         </ul>
                       </div>
@@ -238,10 +254,20 @@ class EventCalendar1 extends Component {
                         </h6>
                         <ul className="users">
                           <li>
-                            <img src={user9.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user9.src}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user10.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user10.src}
+                              alt=""
+                            />
                           </li>
                         </ul>
                       </div>
@@ -270,16 +296,36 @@ class EventCalendar1 extends Component {
                         </h6>
                         <ul className="users">
                           <li>
-                            <img src={user11.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user11.src}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user9.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user9.src}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user10.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user10.src}
+                              alt=""
+                            />
                           </li>
                           <li>
-                            <img src={user11.src} alt="" />
+                            <Image
+                              width={36}
+                              height={36}
+                              src={user11.src}
+                              alt=""
+                            />
                           </li>
                         </ul>
                       </div>

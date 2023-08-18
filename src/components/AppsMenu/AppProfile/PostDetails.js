@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 /// Image
 import profile01 from "../../../images/profile/1.jpg";
@@ -36,8 +37,10 @@ const PostDetails = () => {
                 </div>
                 <div className="profile-info">
                   <div className="profile-photo">
-                    <img
+                    <Image
                       src={profile.src}
+                      width={100}
+                      height={100}
                       className="img-fluid rounded-circle"
                       alt="profile"
                     />
@@ -157,9 +160,12 @@ const PostDetails = () => {
                 </div>
                 <div className="profile-blog mb-5">
                   <h5 className="text-primary d-inline">Today Highlights</h5>
-                  <img
+                  <Image
                     src={profile01.src}
                     alt="profile"
+                    width="0"
+                    height="0"
+                    sizes="100vw"
                     className="img-fluid mt-4 mb-4 w-100"
                   />
                   <h4>
@@ -183,8 +189,10 @@ const PostDetails = () => {
                 <div className="profile-news">
                   <h5 className="text-primary d-inline">Our Latest News</h5>
                   <div className="media pt-3 pb-3">
-                    <img
+                    <Image
                       src={profile05.src}
+                      width={75}
+                      height={75}
                       alt=""
                       className="mr-3 rounded"
                       style={{ width: "75px" }}
@@ -203,8 +211,10 @@ const PostDetails = () => {
                     </div>
                   </div>
                   <div className="media pt-3 pb-3">
-                    <img
+                    <Image
                       src={profile06.src}
+                      width={75}
+                      height={75}
                       alt=""
                       className="mr-3 rounded"
                       style={{ width: "75px" }}
@@ -222,8 +232,10 @@ const PostDetails = () => {
                     </div>
                   </div>
                   <div className="media pt-3 pb-3">
-                    <img
+                    <Image
                       src={profile07.src}
+                      width={75}
+                      height={75}
                       alt=""
                       className="mr-3 rounded"
                       style={{ width: "75px" }}
@@ -261,8 +273,11 @@ const PostDetails = () => {
                       <i className="fa fa-comments-o" /> 28
                     </li>
                   </ul>
-                  <img
+                  <Image
                     src={profile08.src}
+                    width="0"
+                    height="0"
+                    sizes="100vw"
                     alt=""
                     className="img-fluid mb-3 w-100"
                   />

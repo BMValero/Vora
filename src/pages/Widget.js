@@ -5,6 +5,7 @@ import { Dropdown, Nav, Tab } from "react-bootstrap";
 /// Scroll
 import PerfectScrollbar from "react-perfect-scrollbar";
 import Link from "next/link";
+import Image from "next/image";
 // images
 import avatar1 from "../images/avatar/1.jpg";
 import avatar2 from "../images/avatar/2.jpg";
@@ -255,7 +256,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2">
-                        <img alt="" width="50" src={avatar1.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar1.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">Dr sultads Send you Photo</h5>
@@ -409,7 +415,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2">
-                        <img alt="" width="50" src={avatar1.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar1.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">Dr sultads Send you Photo</h5>
@@ -581,7 +592,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2">
-                        <img alt="" width="50" src={avatar1.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar1.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">Dr sultads Send you Photo</h5>
@@ -738,7 +754,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2">
-                        <img alt="" width="50" src={avatar1.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar1.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">
@@ -924,7 +945,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2">
-                        <img alt="" width="50" src={avatar1.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar1.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">
@@ -1056,7 +1082,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2 media-success">
-                        <img alt="" width="50" src={avatar2.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar2.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">
@@ -1123,7 +1154,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2">
-                        <img alt="" width="50" src={avatar1.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar1.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">
@@ -1255,7 +1291,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2 media-primary">
-                        <img alt="" width="50" src={avatar3.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar3.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">
@@ -2223,9 +2264,10 @@ const Widget = () => {
             <div className="card-body">
               <div className="text-center">
                 <div className="profile-photo">
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
                     src={profile.src}
-                    width="100"
                     className="img-fluid rounded-circle"
                     alt=""
                   />
@@ -2303,9 +2345,10 @@ const Widget = () => {
               style={{ backgroundImage: `url(${bg1})` }}
             >
               <div className="profile-photo">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={profile.src}
-                  width="100"
                   className="m-auto img-fluid rounded-circle d-block"
                   alt=""
                 />
@@ -2767,9 +2810,10 @@ const Widget = () => {
               className="text-center p-5 overlay-box"
               style={{ backgroundImage: `url(${bg5})` }}
             >
-              <img
+              <Image
+                width={100}
+                height={50}
                 src={profile.src}
-                width="100"
                 className="img-fluid rounded-circle"
                 alt=""
               />
@@ -3036,7 +3080,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2">
-                        <img alt="" width="50" src={avatar1.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar1.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">Dr sultads Send you Photo</h5>
@@ -3206,7 +3255,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2">
-                        <img alt="" width="50" src={avatar4.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar4.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">Dr sultads Send you Photo</h5>
@@ -3258,7 +3312,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2 media-info">
-                        <img width="50" alt="" src={avatar2.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar2.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">Resport created successfully</h5>
@@ -3310,7 +3369,12 @@ const Widget = () => {
                   <li>
                     <div className="timeline-panel">
                       <div className="media mr-2 media-success">
-                        <img width="50" alt="" src={avatar3.src} />
+                        <Image
+                          width={50}
+                          height={50}
+                          alt=""
+                          src={avatar3.src}
+                        />
                       </div>
                       <div className="media-body">
                         <h5 className="mb-1">Reminder : Treatment Time!</h5>

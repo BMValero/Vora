@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 
 /// React router dom
 import Link from "next/link";
+import Image from "next/image";
 
 /// images
 import logo from "../../images/logo.png";
@@ -16,9 +16,27 @@ const NavHader = () => {
   return (
     <div className="nav-header">
       <Link href="/" className="brand-logo">
-        <img className="logo-abbr" src={logo.src} alt="" />
-        <img className="logo-compact" src={logoText.src} alt="" />
-        <img className="brand-title" src={logoText.src} alt="" />
+        <Image
+          width={52}
+          height={52}
+          className="logo-abbr"
+          src={logo.src}
+          alt=""
+        />
+        <Image
+          width={100}
+          height={30}
+          className="logo-compact"
+          src={logoText.src}
+          alt=""
+        />
+        <Image
+          width={100}
+          height={30}
+          className="brand-title"
+          src={logoText.src}
+          alt=""
+        />
       </Link>
 
       <div className="nav-control" onClick={() => setToggle(!toggle)}>

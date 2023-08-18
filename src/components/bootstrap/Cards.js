@@ -1,6 +1,7 @@
 "use client";
 import React, { Fragment } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 /// Compoents
 import PageTitle from "../../layouts/PageTitle";
@@ -307,7 +308,14 @@ const UiCards = () => {
         </Col>
         <Col xl="6" lg="6">
           <Card className="mb-3">
-            <img className="card-img-top img-fluid" src={img1.src} alt="Card cap" />
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="card-img-top img-fluid"
+              src={img1.src}
+              alt="Card cap"
+            />
             <Card.Header>
               <Card.Title>Card title</Card.Title>
             </Card.Header>
@@ -325,7 +333,14 @@ const UiCards = () => {
         </Col>
         <Col xl="6" lg="6">
           <Card className="mb-3">
-            <img className="card-img-top img-fluid" src={img2.src} alt="Card cap" />
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="card-img-top img-fluid"
+              src={img2.src}
+              alt="Card cap"
+            />
             <Card.Header>
               <Card.Title>Card title</Card.Title>
             </Card.Header>
@@ -359,7 +374,10 @@ const UiCards = () => {
                 lead-in to the additional content. This content is a little
               </Card.Text>
             </Card.Body>
-            <img
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
               className="card-img-bottom img-fluid"
               src={img3.src}
               alt="Card cap"

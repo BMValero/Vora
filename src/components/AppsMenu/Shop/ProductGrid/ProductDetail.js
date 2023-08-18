@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Modal, Nav, Tab } from "react-bootstrap";
 import Link from "next/link";
+import Image from "next/image";
 import classnames from "classnames";
 import avater1 from "../../../../images/avatar/1.jpg";
 import product1 from "../../../../images/product/1.jpg";
@@ -34,16 +35,44 @@ const ProductDetail = () => {
                   <Tab.Container defaultActiveKey="first">
                     <Tab.Content>
                       <Tab.Pane eventKey="first">
-                        <img className="img-fluid" src={product1.src} alt="" />
+                        <Image
+                          width="0"
+                          height="0"
+                          sizes="100vw"
+                          className="img-fluid w-100"
+                          src={product1.src}
+                          alt=""
+                        />
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <img className="img-fluid" src={product2.src} alt="" />
+                        <Image
+                          width="0"
+                          height="0"
+                          sizes="100vw"
+                          className="img-fluid w-100"
+                          src={product2.src}
+                          alt=""
+                        />
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <img className="img-fluid" src={product3.src} alt="" />
+                        <Image
+                          width="0"
+                          height="0"
+                          sizes="100vw"
+                          className="img-fluid w-100"
+                          src={product3.src}
+                          alt=""
+                        />
                       </Tab.Pane>
                       <Tab.Pane eventKey="four">
-                        <img className="img-fluid" src={product4.src} alt="" />
+                        <Image
+                          width="0"
+                          height="0"
+                          sizes="100vw"
+                          className="img-fluid w-100"
+                          src={product4.src}
+                          alt=""
+                        />
                       </Tab.Pane>
                     </Tab.Content>
                     <div className="tab-slide-content new-arrival-product mb-4 mb-xl-0">
@@ -55,41 +84,45 @@ const ProductDetail = () => {
                       >
                         <Nav.Item as="li">
                           <Nav.Link as="a" eventKey="first" href="#first">
-                            <img
-                              className="img-fluid"
+                            <Image
+                              width="0"
+                              height="0"
+                              sizes="100vw"
+                              className="img-fluid w-100"
                               src={tab1.src}
-                              alt=""
-                              width={50}
                             />
                           </Nav.Link>
                         </Nav.Item>
                         <Nav.Item as="li">
                           <Nav.Link as="a" eventKey="second" href="#second">
-                            <img
-                              className="img-fluid"
+                            <Image
+                              width="0"
+                              height="0"
+                              sizes="100vw"
+                              className="img-fluid w-100"
                               src={tab2.src}
-                              alt=""
-                              width={50}
                             />
                           </Nav.Link>
                         </Nav.Item>
                         <Nav.Item as="li">
                           <Nav.Link as="a" eventKey="third" href="#third">
-                            <img
-                              className="img-fluid"
+                            <Image
+                              width="0"
+                              height="0"
+                              sizes="100vw"
+                              className="img-fluid w-100"
                               src={tab3.src}
-                              alt=""
-                              width={50}
                             />
                           </Nav.Link>
                         </Nav.Item>
                         <Nav.Item as="li">
                           <Nav.Link as="a" href="#for" eventKey="four">
-                            <img
-                              className="img-fluid"
+                            <Image
+                              width="0"
+                              height="0"
+                              sizes="100vw"
+                              className="img-fluid w-100"
                               src={tab4.src}
-                              alt=""
-                              width={50}
                             />
                           </Nav.Link>
                         </Nav.Item>
@@ -319,9 +352,10 @@ const ProductDetail = () => {
                   }}
                 >
                   <div className="text-center mb-4">
-                    <img
+                    <Image
                       className="img-fluid rounded"
                       width={78}
+                      height={78}
                       src={avater1.src}
                       alt="DexignZone"
                     />

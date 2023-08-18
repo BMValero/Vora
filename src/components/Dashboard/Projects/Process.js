@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image.js";
 
 import { Table, Pagination, Dropdown } from "react-bootstrap";
 import data from "./Tabldata.js";
@@ -104,7 +105,9 @@ const Process = () => {
                           </td>
                           <td>
                             <div className="d-flex align-items-center">
-                              <img
+                              <Image
+                                width={50}
+                                height={50}
                                 src={d.Cimg}
                                 alt=""
                                 className="rounded-circle mr-sm-3 mr-2 img-2"
@@ -121,7 +124,9 @@ const Process = () => {
                           </td>
                           <td>
                             <div className="d-flex align-items-center">
-                              <img
+                              <Image
+                                width={50}
+                                height={50}
                                 src={d.Pimg}
                                 alt=""
                                 className="rounded-circle mr-sm-3 mr-2 img-2"

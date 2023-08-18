@@ -10,6 +10,7 @@ import { SRLWrapper } from "simple-react-lightbox";
 //import img_large1 from '../../../../images/big/1.1.jpg';
 //import img_large2 from '../../../../images/big/2.2.jpg';
 //import img_large3 from '../../../../images/big/3.3.jpg';
+import Image from "next/image";
 
 import img_thumb2 from "../../../images/profile/2.jpg";
 import img_thumb3 from "../../../images/profile/3.jpg";
@@ -40,7 +41,14 @@ class Lightgallery extends Component {
                     key={index}
                   >
                     <a href={item.large}>
-                      <img src={item.thumb} alt="" className="img-fluid" />
+                      <Image
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        src={item.thumb}
+                        alt=""
+                        className="img-fluid w-100"
+                      />
                     </a>
                   </div>
                 ))}

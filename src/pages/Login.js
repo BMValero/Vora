@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import logo from "../images/logo-full.png";
 
 const Login = () => {
@@ -22,7 +23,7 @@ const Login = () => {
               <div className="auth-form">
                 <div className="text-center mb-3">
                   <Link href="/">
-                    <img src={logo.src} alt="" />
+                    <Image width={175} height={60} src={logo.src} alt="" />
                   </Link>
                 </div>
                 <h4 className="text-center mb-4 text-white">

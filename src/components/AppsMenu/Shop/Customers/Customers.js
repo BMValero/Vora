@@ -1,6 +1,7 @@
 "use client";
 import React, { Fragment } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import PageTitle from "@/layouts/PageTitle";
 import { Dropdown } from "react-bootstrap";
 
@@ -112,10 +113,11 @@ const Customers = () => {
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
                               <div className="">
-                                <img
+                                <Image
+                                  width={30}
+                                  height={30}
                                   className="rounded-circle img-fluid"
                                   src={avartar5.src}
-                                  width="30"
                                   alt=""
                                 />
                               </div>
@@ -145,11 +147,12 @@ const Customers = () => {
                         <Link href="/ecom-customers">
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
-                              <img
+                              <Image
+                                width={30}
+                                height={30}
                                 className="rounded-circle img-fluid"
                                 src={avartar1.src}
                                 alt=""
-                                width="30"
                               />
                             </div>
                             <div className="media-body">
@@ -178,10 +181,11 @@ const Customers = () => {
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
                               <div className="">
-                                <img
+                                <Image
+                                  width={30}
+                                  height={30}
                                   className="rounded-circle img-fluid"
                                   src={avartar5.src}
-                                  width="30"
                                   alt=""
                                 />
                               </div>
@@ -211,11 +215,12 @@ const Customers = () => {
                         <Link href="/ecom-customers">
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
-                              <img
+                              <Image
+                                width={30}
+                                height={30}
                                 className="rounded-circle img-fluid"
                                 src={avartar1.src}
                                 alt=""
-                                width="30"
                               />
                             </div>
                             <div className="media-body">
@@ -243,11 +248,12 @@ const Customers = () => {
                         <Link href="/ecom-customers">
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
-                              <img
+                              <Image
+                                width={30}
+                                height={30}
                                 className="rounded-circle img-fluid"
                                 src={avartar1.src}
                                 alt=""
-                                width="30"
                               />
                             </div>
                             <div className="media-body">
@@ -278,10 +284,11 @@ const Customers = () => {
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
                               <div className="">
-                                <img
+                                <Image
+                                  width={30}
+                                  height={30}
                                   className="rounded-circle img-fluid"
                                   src={avartar5.src}
-                                  width="30"
                                   alt=""
                                 />
                               </div>
@@ -313,11 +320,12 @@ const Customers = () => {
                         <Link href="/ecom-customers">
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
-                              <img
+                              <Image
+                                width={30}
+                                height={30}
                                 className="rounded-circle img-fluid"
                                 src={avartar1.src}
                                 alt=""
-                                width="30"
                               />
                             </div>
                             <div className="media-body">
@@ -347,11 +355,12 @@ const Customers = () => {
                         <Link href="/ecom-customers">
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
-                              <img
+                              <Image
+                                width={30}
+                                height={30}
                                 className="rounded-circle img-fluid"
                                 src={avartar1.src}
                                 alt=""
-                                width="30"
                               />
                             </div>
                             <div className="media-body">
@@ -380,10 +389,11 @@ const Customers = () => {
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
                               <div className="">
-                                <img
+                                <Image
+                                  width={30}
+                                  height={30}
                                   className="rounded-circle img-fluid"
                                   src={avartar5.src}
-                                  width="30"
                                   alt=""
                                 />
                               </div>
@@ -413,11 +423,12 @@ const Customers = () => {
                         <Link href="/ecom-customers">
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
-                              <img
+                              <Image
+                                width={30}
+                                height={30}
                                 className="rounded-circle img-fluid"
                                 src={avartar1.src}
                                 alt=""
-                                width="30"
                               />
                             </div>
                             <div className="media-body">
@@ -446,10 +457,11 @@ const Customers = () => {
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
                               <div className="">
-                                <img
+                                <Image
+                                  width={30}
+                                  height={30}
                                   className="rounded-circle img-fluid"
                                   src={avartar5.src}
-                                  width="30"
                                   alt=""
                                 />
                               </div>
@@ -479,11 +491,12 @@ const Customers = () => {
                         <Link href="/ecom-customers">
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
-                              <img
+                              <Image
+                                width={30}
+                                height={30}
                                 className="rounded-circle img-fluid"
                                 src={avartar1.src}
                                 alt=""
-                                width="30"
                               />
                             </div>
                             <div className="media-body">
@@ -511,11 +524,12 @@ const Customers = () => {
                         <Link href="/ecom-customers">
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
-                              <img
+                              <Image
+                                width={30}
+                                height={30}
                                 className="rounded-circle img-fluid"
                                 src={avartar1.src}
                                 alt=""
-                                width="30"
                               />
                             </div>
                             <div className="media-body">
@@ -546,10 +560,11 @@ const Customers = () => {
                           <div className="media d-flex align-items-center">
                             <div className="avatar avatar-xl mr-2">
                               <div className="">
-                                <img
+                                <Image
+                                  width={30}
+                                  height={30}
                                   className="rounded-circle img-fluid"
                                   src={avartar5.src}
-                                  width="30"
                                   alt=""
                                 />
                               </div>

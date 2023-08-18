@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Tab, Nav, Dropdown } from "react-bootstrap";
 
 //**  Import Single Job Components */
@@ -71,14 +72,15 @@ const Analytics = () => {
                     <div className="col-xl-5 col-lg-5 col-sm-8 col-12 mb-3 mb-lg-0">
                       <div className="media align-items-center">
                         <Link href="/ecom-product-detail">
-                          <img
+                          <Image
+                            width={105}
+                            height={105}
                             className="rounded mr-3"
                             src={
                               require("./../../../../images/card/pic4.jpg")
                                 .default
                             }
                             alt=""
-                            width="105"
                           />
                         </Link>
                         <div className="media-body">
@@ -196,14 +198,15 @@ const Analytics = () => {
                     <div className="col-xl-5 col-lg-5 col-sm-8 col-12 mb-3 mb-lg-0">
                       <div className="media align-items-center">
                         <Link href="/ecom-product-detail">
-                          <img
+                          <Image
+                            width={105}
+                            height={105}
                             className="rounded mr-3"
                             src={
                               require("./../../../../images/card/pic2.jpg")
                                 .default
                             }
                             alt=""
-                            width="105"
                           />
                         </Link>
                         <div className="media-body">
@@ -321,14 +324,15 @@ const Analytics = () => {
                     <div className="col-xl-5 col-lg-5 col-sm-8 col-12 mb-3 mb-lg-0">
                       <div className="media align-items-center">
                         <Link href="/ecom-product-detail">
-                          <img
+                          <Image
+                            width={105}
+                            height={105}
                             className="rounded mr-3"
                             src={
                               require("./../../../../images/card/pic7.jpg")
                                 .default
                             }
                             alt=""
-                            width="105"
                           />
                         </Link>
                         <div className="media-body">
@@ -558,12 +562,13 @@ const Analytics = () => {
                 <div className="card-body">
                   <div className="media align-items-center mb-4">
                     <Link href="/app-profile">
-                      <img
+                      <Image
+                        width={70}
+                        height={70}
                         className="mr-3 rounded"
                         src={
                           require("../../../../images/profile/5.jpg").default
                         }
-                        width="70"
                         alt=""
                       />
                     </Link>
@@ -580,12 +585,13 @@ const Analytics = () => {
                   </div>
                   <div className="media align-items-center mb-4">
                     <Link href="/app-profile">
-                      <img
+                      <Image
+                        width={70}
+                        height={70}
                         className="mr-3 rounded"
                         src={
                           require("../../../../images/profile/6.jpg").default
                         }
-                        width="70"
                         alt=""
                       />
                     </Link>
@@ -602,12 +608,13 @@ const Analytics = () => {
                   </div>
                   <div className="media align-items-center mb-4">
                     <Link href="/app-profile">
-                      <img
+                      <Image
+                        width={70}
+                        height={70}
                         className="mr-3 rounded"
                         src={
                           require("../../../../images/profile/7.jpg").default
                         }
-                        width="70"
                         alt=""
                       />
                     </Link>
@@ -624,12 +631,13 @@ const Analytics = () => {
                   </div>
                   <div className="media align-items-center">
                     <Link href="/app-profile">
-                      <img
+                      <Image
+                        width={70}
+                        height={70}
                         className="mr-3 rounded"
                         src={
                           require("../../../../images/profile/10.jpg").default
                         }
-                        width="70"
                         alt=""
                       />
                     </Link>
@@ -737,9 +745,10 @@ const Analytics = () => {
                         <div className="timeline-panel">
                           <div className="media mr-4">
                             <Link href="/ecom-product-detail">
-                              <img
+                              <Image
+                                width={90}
+                                height={90}
                                 alt=""
-                                width="90"
                                 src={
                                   require("../../../../images/card/pic8.jpg")
                                     .default
@@ -775,9 +784,10 @@ const Analytics = () => {
                         <div className="timeline-panel">
                           <div className="media mr-4">
                             <Link href="/ecom-product-detail">
-                              <img
+                              <Image
+                                width={90}
+                                height={90}
                                 alt=""
-                                width="90"
                                 src={
                                   require("../../../../images/card/pic4.jpg")
                                     .default
@@ -813,9 +823,10 @@ const Analytics = () => {
                         <div className="timeline-panel">
                           <div className="media mr-4">
                             <Link href="/ecom-product-detail">
-                              <img
+                              <Image
+                                width={90}
+                                height={90}
                                 alt=""
-                                width="90"
                                 src={
                                   require("../../../../images/card/pic9.jpg")
                                     .default
@@ -851,9 +862,10 @@ const Analytics = () => {
                         <div className="timeline-panel">
                           <div className="media mr-4">
                             <Link href="/ecom-product-detail">
-                              <img
+                              <Image
+                                width={90}
+                                height={90}
                                 alt=""
-                                width="90"
                                 src={
                                   require("../../../../images/card/pic6.jpg")
                                     .default
@@ -889,9 +901,10 @@ const Analytics = () => {
                         <div className="timeline-panel">
                           <div className="media mr-4">
                             <Link href="/ecom-product-detail">
-                              <img
+                              <Image
+                                width={90}
+                                height={90}
                                 alt=""
-                                width="90"
                                 src={
                                   require("../../../../images/card/pic10.jpg")
                                     .default
@@ -939,7 +952,9 @@ const Analytics = () => {
                 <div className="card-body border-bottom">
                   <div className="media mb-3">
                     <Link href="/ecom-product-detail">
-                      <img
+                      <Image
+                        width={105}
+                        height={105}
                         className="rounded"
                         src={
                           require("../../../../images/card/pic11.jpg").default
@@ -951,10 +966,7 @@ const Analytics = () => {
                   </div>
                   <div className="info">
                     <h5 className="text-black mb-3">
-                      <Link
-                        href="/ecom-product-detail"
-                        className="text-black"
-                      >
+                      <Link href="/ecom-product-detail" className="text-black">
                         Medium Spicy Pizza with Kemangi Leaf
                       </Link>
                     </h5>
@@ -1024,7 +1036,9 @@ const Analytics = () => {
                 <div className="card-body border-bottom">
                   <div className="media mb-3">
                     <Link href="/ecom-product-detail">
-                      <img
+                      <Image
+                        width={105}
+                        height={105}
                         className="rounded"
                         src={
                           require("../../../../images/card/pic12.jpg").default
@@ -1036,10 +1050,7 @@ const Analytics = () => {
                   </div>
                   <div className="info">
                     <h5 className="text-black mb-3">
-                      <Link
-                        href="/ecom-product-detail"
-                        className="text-black"
-                      >
+                      <Link href="/ecom-product-detail" className="text-black">
                         Medium Spicy Pizza with Kemangi Leaf
                       </Link>
                     </h5>
@@ -1109,7 +1120,9 @@ const Analytics = () => {
                 <div className="card-body border-bottom">
                   <div className="media mb-3">
                     <Link href="/ecom-product-detail">
-                      <img
+                      <Image
+                        width={105}
+                        height={105}
                         className="rounded"
                         src={
                           require("../../../../images/card/pic11.jpg").default
@@ -1121,10 +1134,7 @@ const Analytics = () => {
                   </div>
                   <div className="info">
                     <h5 className="text-black mb-3">
-                      <Link
-                        href="/ecom-product-detail"
-                        className="text-black"
-                      >
+                      <Link href="/ecom-product-detail" className="text-black">
                         Pizza Meal for Kids (Small size)
                       </Link>
                     </h5>

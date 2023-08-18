@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 /// Images
 import avatar1 from "../../images/avatar/1.jpg";
@@ -90,8 +91,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             >
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar1}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar1.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -106,8 +109,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar2}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar2.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -122,8 +127,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar3}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar3.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -138,8 +145,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar4}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar4.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -155,8 +164,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar5}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar5.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -171,8 +182,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar1}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar1.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -187,8 +200,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar2}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar2.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -204,8 +219,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar3}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar3.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -220,8 +237,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar4}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar4.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -237,8 +256,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar5}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar5.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -253,8 +274,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar1}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar1.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -269,8 +292,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar2}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar2.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -285,8 +310,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar3}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar3.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -302,8 +329,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar4}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar4.src}
                     className="rounded-circle user_img"
                     alt=""
                   />
@@ -318,8 +347,10 @@ const Chat = ({ PerfectScrollbar, toggleChatBox, toggleTab }) => {
             <li className="dz-chat-user" onClick={() => setOpenMsg(true)}>
               <div className="d-flex bd-highlight">
                 <div className="img_cont">
-                  <img
-                    src={avatar5}
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatar5.src}
                     className="rounded-circle user_img"
                     alt=""
                   />

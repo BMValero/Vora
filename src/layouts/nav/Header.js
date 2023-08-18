@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 /// Scroll
 import PerfectScrollbar from "react-perfect-scrollbar";
@@ -197,7 +198,12 @@ const Header = ({ onNote, toggle, onProfile, onActivity, onNotification }) => {
                       <li>
                         <div className="timeline-panel">
                           <div className="media mr-2">
-                            <img alt="avatar" width="50" src={avatar.src} />
+                            <Image
+                              width={50}
+                              height={50}
+                              alt="avatar"
+                              src={avatar.src}
+                            />
                           </div>
                           <div className="media-body">
                             <h6 className="mb-1">Dr sultads Send you Photo</h6>
@@ -236,7 +242,12 @@ const Header = ({ onNote, toggle, onProfile, onActivity, onNotification }) => {
                       <li>
                         <div className="timeline-panel">
                           <div className="media mr-2">
-                            <img alt="avatar" width="50" src={avatar.src} />
+                            <Image
+                              width={50}
+                              height={50}
+                              alt="avatar"
+                              src={avatar.src}
+                            />
                           </div>
                           <div className="media-body">
                             <h6 className="mb-1">Dr sultads Send you Photo</h6>
@@ -292,7 +303,7 @@ const Header = ({ onNote, toggle, onProfile, onActivity, onNotification }) => {
                   role="button"
                   data-toggle="dropdown"
                 >
-                  <img src={profile.src} width="20" alt="" />
+                  <Image width={50} height={50} src={profile.src} alt="" />
                   <div className="header-info">
                     <span className="text-black">Peter Parkur</span>
                     <p className="fs-12 mb-0">Super Admin</p>

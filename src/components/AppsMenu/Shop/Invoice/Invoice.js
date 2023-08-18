@@ -3,6 +3,7 @@ import PageTitle from "../../../../layouts/PageTitle";
 import logo from "../../../../images/logo.png";
 import logotext from "../../../../images/logo-text.png";
 import qrcode from "../../../../images/qr.png";
+import Image from "next/image";
 
 const Invoice = () => {
   return (
@@ -49,8 +50,20 @@ const Invoice = () => {
                   <div className="row align-items-center">
                     <div className="col-sm-9">
                       <div className="brand-logo mb-3">
-                        <img className="logo-abbr mr-2" src={logo.src} alt="" />
-                        <img className="logo-compact" src={logotext.src} alt="" />
+                        <Image
+                          className="logo-abbr mr-2"
+                          width={58}
+                          height={58}
+                          src={logo.src}
+                          alt=""
+                        />
+                        <Image
+                          className="logo-compact"
+                          width={100}
+                          height={30}
+                          src={logotext.src}
+                          alt=""
+                        />
                       </div>
                       <span>
                         Please send exact amount:{" "}
@@ -63,7 +76,9 @@ const Invoice = () => {
                       </small>
                     </div>
                     <div className="col-sm-3 mt-3">
-                      <img
+                      <Image
+                        width={100}
+                        height={30}
                         src={qrcode.src}
                         className="img-fluid width110"
                         alt=""
